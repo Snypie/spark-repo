@@ -1,5 +1,9 @@
 /* stylelint-disable selector-list-comma-newline-after */
 
+body {
+  background: rgba(236, 234, 234, 0.952);
+}
+
 .blog-header {
   line-height: 1;
   border-bottom: 1px solid #e5e5e5;
@@ -7,7 +11,7 @@
 
 .blog-header-logo {
   font-family: "Playfair Display", Georgia, "Times New Roman", serif;
-  font-size: 2.25rem;
+  font-size: 2.6rem;
   color: rgb(7, 7, 102) !important; 
 }
 
@@ -99,6 +103,22 @@ h1, h2, h3, h4, h5, h6 {
 /*
  * Blog posts
  */
+
+ .card-img-right {
+   width: 200px;
+   height: 250px;
+ }
+
+.card-img-right-two {
+  width: 180px;
+  height: 250px;
+}
+
+ .jumbotron {
+   background: url(https://www.leagueofpapers.com/wp-content/uploads/2018/08/Sandstorm-Ekko-Splash-Art-league_of_papers.jpg);
+   background-size: cover;
+ }
+
 .blog-post {
   margin-bottom: 4rem;
 }
