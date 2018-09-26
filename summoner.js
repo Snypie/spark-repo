@@ -1,29 +1,39 @@
 
 let state;
 
-
-const apiUrl = 'https://na1.api.riotgames.com/lol/summoner/v3/summoners/by-name/snypiespyder?api_key=RGAPI-6537e196-1c0c-4274-a32f-9af43048e7a1';
+const apiUrl = 'https://api.myjson.com/bins/ynnm0';
 // const apiKey = 'RGAPI-936b7cb5-f720-42d8-acf0-8c7ac89a5838';
 // let leagueType = '/lol/league/v3/challengerleagues/by-queue/{queue}';
 
 
 let getQuoteUsingAsync = async function() {
     try {
-        const response = await fetch(apiUrl, {
-
-            mode: 'no-cors'
-        
-        });
-        console.log(response);
-        const json = await response.json();
-
-        // updateContent();
+    const response = await fetch(apiUrl);
+    state = await response.json();
+    // console.log(state);
+    updateContent();
     } catch (err) {
-        console.log('Something went wrong. :(');
-        console.error(err.stack);
+     console.log('something went wrong');
+     console.log(err);
     }
 }
 
+let updateContent = function() {
+    console.log(state);
 
+    // const fives = document.getElementById('character-name');
+    // const imgAnimated = document.getElementById('imgAnimated');
+    // const quote = document.getElementById('character-quote');
+    const img = document.querySelector('#imgAnimated-img>img');
+    // const mainContent = document.getElementById('main-content-container');
+
+    // imgAnimated.innerText = state.imgAnimated;
+    // quote.innerText = state.quote;
+
+    for(let i = 0; i < 2; i++) {
+
+    img.src = state[i].imgAnimated;
+    }
+}
 
 getQuoteUsingAsync();
