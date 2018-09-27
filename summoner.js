@@ -1,16 +1,20 @@
 
 let state;
+let stateTwo;
 
 // const apiUrl = 'https://api.myjson.com/bins/ynnm0';
 const apiUrlMech = 'https://api.myjson.com/bins/ift3c';
-// const apiUrlDragon = 'https://api.myjson.com/bins/152a2w';
+const apiUrlDragon = 'https://api.myjson.com/bins/152a2w';
 
 
-let getQuoteUsingAsync = async function() {
+let getMechsUsingAsync = async function() {
     try {
+        // let cardNumber = Math.floor(Math.random() * 100);
     const response = await fetch(apiUrlMech);
     state = await response.json();
-    // console.log(state);
+    
+    //  console.log(state);
+    
     updateContent();
     } catch (err) {
      console.log('something went wrong');
@@ -18,42 +22,46 @@ let getQuoteUsingAsync = async function() {
     }
 }
 
-// let getQuoteUsingAsync = async function() {
-//     try {
-//     const response = await fetch(apiUrlDragon);
-//     state = await response.json();
-//     // console.log(state);
-//     updateContent();
-//     } catch (err) {
-//      console.log('something went wrong');
-//      console.log(err);
-//     }
-// }
+let getDragonsUsingAsync = async function() {
+    try {
+    const response = await fetch(apiUrlDragon);
+    stateTwo = await response.json();
+    console.log(stateTwo);
+    updateContentTwo();
+    } catch (err) {
+     console.log('something went wrong dragon');
+     console.log(err);
+    }
+}
+// image.src = state.img;
+// let image = document.querySelector('#img-mech>img');
 
 let updateContent = function() {
-    console.log(state);
-
-    // const fives = document.getElementById('character-name');
-    // const imgAnimated = document.getElementById('imgAnimated');
-    // const quote = document.getElementById('character-quote');
-    const img = document.querySelector('#img-mech>img');
-    // const mainContent = document.getElementById('main-content-container');
-
-    // imgAnimated.innerText = state.imgAnimated;
-    // quote.innerText = state.quote;
-
-    let cardArray = [1, 2, 3]
-
-
     for ( let i = 0; i < 3; i++) {
-        let cardNumber = Math.floor(Math.random() * 100);
-        cardArray[i] = state[cardNumber].img;
+        let cardNumber = Math.floor(Math.random() * 130);
+        let cardArray = state[cardNumber].img;
         let imgLocation = document.getElementById('img-' + i);
-        imgLocation.setAttribute("src", cardArray[i]);
+        imgLocation.setAttribute("src", cardArray);
+        // let imgCode = state.img[i];
+        // let image = document.querySelector('#img-mech>img');
+        // image.src = state.img;
     }
-    
-    img.src = state[i].img
-    
+    document.getElementById('new-img-button')
+    .addEventListener('click', updateContent);
+}
+    let updateContentTwo = function() {
+        for ( let i = 0; i < 3; i++) {
+            let cardNumber = Math.floor(Math.random() * 74);
+            let cardArray = stateTwo[cardNumber].img;
+            let imgLocation = document.getElementById('dimg-' + i);
+            imgLocation.setAttribute("src", cardArray);
+            // let imgCode = state.img[i];
+            // let image = document.querySelector('#img-mech>img');
+            // image.src = state.img;
+        }
+        document.getElementById('new-img-button-two')
+        .addEventListener('click', updateContentTwo);
 }
 
-getQuoteUsingAsync();
+getMechsUsingAsync();
+getDragonsUsingAsync();
