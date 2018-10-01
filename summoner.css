@@ -1,10 +1,11 @@
+
 body {
     background: url(https://www.gamingcfg.com/img/9611/Your-Turn-Hearthstone.jpg);
     background-size: cover;
 }
 
 #img-mech {
-    margin: 20px;
+    margin: -5px;
 display: flex;
 justify-content: space-between;
 /* flex-direction: row-reverse; */
@@ -44,4 +45,10 @@ height: 100%
 #dimg-2 {
     width: 15%;
     height: 15%;
+}
+
+.btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
 }
