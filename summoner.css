@@ -1,8 +1,27 @@
 
-body {
+body, html {
+    /* height: 100%; */
+    padding: 0;
+    margin: 0;
+  }
+  
+  body {
+    background-image: url('https://cdna.artstation.com/p/assets/images/images/000/159/956/large/arno-male-dragon-outbreak-signa.jpg?1407524716');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .gradient {
+    width: 100%;
+    height: 100%;;
+    background-image: radial-gradient(at 300px 300px, rgba(0,0,0, .1) 0, #111 70%);
+  }
+
+
+/* body {
     background: rgba(236, 234, 234, 0.952);
     background-size: cover;
-}
+} */
 
 #img-mech {
     margin-top: -25px;
@@ -10,17 +29,20 @@ display: flex;
 justify-content: space-between;
 /* flex-direction: row-reverse; */
 width: 100%;
-height: 100%
+height: 100%;
+margin-left: 100px
 }
 
 #img-dragon {
-    margin-top: -15px;
+    margin-top: -25px;
     display: flex;
     justify-content: space-between;
     /* align-items: flex-end;
     align-content: flex-end; */
     width: 100%;
     height: 100%;
+    margin-left: 100px
+
 }
 
 #img-0 {
@@ -57,12 +79,14 @@ height: 100%
 }
 
 #new-img-button-two {
+    margin-top: -70px;
     margin-left: 80vw;
 }
 
 #footertwo {
     border-radius: 7px;
     color: white;
+    text-align:  center;
 }
 
 hr {

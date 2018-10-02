@@ -64,5 +64,13 @@ let updateContent = function() {
         .addEventListener('click', updateContentTwo);
 }
 
+const gradient = document.querySelector(".gradient");
+
+function onMouseMove(event) {
+  gradient.style.backgroundImage = 'radial-gradient(at ' + event.clientX + 'px ' + event.clientY + 'px, rgba(0,0,0,.1) 0, #111 70%)';
+}
+document.addEventListener("mousemove", onMouseMove);
+
+
 getMechsUsingAsync();
 getDragonsUsingAsync();
