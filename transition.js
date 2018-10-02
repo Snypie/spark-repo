@@ -1,13 +1,14 @@
-const load = function() {
-    const container = document.getElementById('container');
-    
+const load = function() {    
     for(let i = 0; i < 5; i++) {
-        element.classList.add('item');
-        element.classList.add('hidden');
-        element.innerText = data[i].item;
-        container.appendChild(element);
+        let transCard = document.getElementsByClassName('cardCon')[i];
+        // let transCardBack = document.getElementsByClassName('cardback')
 
-        setTimeout(() => element.classList.remove('hidden'), 500*i);
+        // transCard.classList.add('hidden');
+
+        
+
+
+        setTimeout(() => transCard.classList.remove('hidden'), 500*i);
     }
 }
 

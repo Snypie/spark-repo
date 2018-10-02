@@ -4,7 +4,7 @@ body {
 }
 
 .cardback {
-    margin: 20px;
+    /* margin: 20px; */
     display: flex;
     justify-content: space-between;
 }
@@ -83,3 +83,13 @@ hr {
     color: white;
 }
 
+.cardCon {
+    opacity: 1;
+    transition: all 3s ease-in;
+    margin-top: 0px;
+}
+
+.cardCon.hidden {
+    opacity: 0;
+    margin-top: 300px;
+}
