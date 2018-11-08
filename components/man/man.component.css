@@ -1,0 +1,19 @@
+.jumbotron {
+    margin: 0 auto;
+    padding-left: 2rem;
+    padding-top: -2rem;
+}
+
+.form-check {
+    display: inline;
+    padding: 7px;
+}
+
+.table-dark {
+    background: rgba(0, 0, 0, 0.908);
+    color: rgb(211, 211, 211);
+}
+
+/* .back {
+    background: rgba(0, 0, 0, 0.708);
+} */
